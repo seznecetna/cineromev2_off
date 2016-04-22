@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -10,13 +11,16 @@
 
 <p> Voici la liste de votre panier : </p>
 
-<c:forEach var="object_panier" items="${listePanier}">
+<p> Le panier :  ${sessionScope.panier}</p>
+<p> La liste du panier :  ${sessionScope.panier.listPanier}</p>
+
+<c:forEach var="object_panier" items="${sessionScope.panier.listPanier}">
 			<tr>
-				<td>${object_panier.prixHT}</td>
+				<td>${object_panier.prixHt}</td>
 				<td>${object_panier.stock}</td>
 				<td>${object_panier.designation}</td>
 				<td>${object_panier.reference}</td>
-				<td>${object_panier.realisateur}</td>
+				<%-- <td>${object_panier.realisateur}</td> --%>
 				<td>${object_panier.titre}</td>
 				<td>${object_panier.auteur}</td>
 				<td>${object_panier.editeur}</td>
@@ -27,7 +31,7 @@
 						<input type="hidden" name="reference" value="${object_article.reference}" />
 						<input type="submit" value="Retirer" name="rmItem"/>
 					</p>
-				</form>
+					</form>
 				</td>
 			</tr>
 		</c:forEach>

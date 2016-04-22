@@ -55,12 +55,14 @@ public class PanierCineRomeV2 {
 		return null;
 	}
 
-	public ArrayList<ArticleCineRomeV2> getListePanier() {
+
+
+	public ArrayList<ArticleCineRomeV2> getListPanier() {
 		return listPanier;
 	}
 
-	public void setListePanier(ArrayList<ArticleCineRomeV2> listePanier) {
-		this.listPanier = listePanier;
+	public void setListPanier(ArrayList<ArticleCineRomeV2> listPanier) {
+		this.listPanier = listPanier;
 	}
 
 	@Override

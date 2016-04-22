@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import fr.demos.cineromev2.data.CineRomeV2DAO;
-import fr.demos.cineromev2.data.FileCineRomeV2DAO;
 import fr.demos.cineromev2.data.SqlCineRomeV2DAO;
 import fr.demos.cineromev2.metier.ArticleCineRomeV2;
 import fr.demos.cineromev2.metier.PanierCineRomeV2;
@@ -112,6 +111,7 @@ public class ListDesArticles extends HttpServlet {
 //					RequestDispatcher rd = request.getRequestDispatcher("/listeArticle.jsp");
 //					rd.forward(request, response);
 					System.out.println("sauveSQL panier");
+					System.out.println("panier : " + panier);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

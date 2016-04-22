@@ -53,7 +53,7 @@ public class PanierCineRomeV2Controller extends HttpServlet {
 		}
 		
 		try {
-			listePanier = panier.getListePanier();
+			listePanier = panier.getListPanier();
 			listePanier = listePanierSql.rechercheTout();
 			
 		}catch (Exception e) {
